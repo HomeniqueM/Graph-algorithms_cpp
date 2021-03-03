@@ -66,3 +66,11 @@ void AdjacencyList::printGraph() {
     cout << endl;
   }
 }
+
+void AdjacencyList::printGraphWithWeight(){
+    for (auto i = root.begin(); i != root.end(); ++i) {
+    cout << "V (" << setw(3) << i->value << ") | R: ";
+    i->printAdjacencyWithWeight();
+    cout << endl;
+  }
+}

@@ -65,8 +65,8 @@ void Vertice::printAdjacencyWithWeight() {
 
   if (adjacency.size() > 0) {
     for (auto i = adjacency.begin(); i != adjacency.end(); ++i) {
-      cout << " == "
-           << "P:(" << setw(3) << i->getWeight() << ") ==>" << i->getValue();
+      cout << " --"
+           << "(W:" << setw(3) << i->getWeight() << ")--> " << i->getValue();
     }
   } else {
     cout << "null";

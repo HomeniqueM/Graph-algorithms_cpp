@@ -38,10 +38,11 @@ public:
   // Note: that this method may cease to be boolean
   virtual bool addAdjacency(int value, int adjValue, int weight);
 
-
   /** Shows all the graphs its vertices (V) and the
    * respective relations (R) of each vertices
    */
   virtual void printGraph();
+
+  virtual void printGraphWithWeight();
 };
 #endif
