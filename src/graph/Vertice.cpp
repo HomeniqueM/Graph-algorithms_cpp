@@ -1,5 +1,5 @@
 #include "headers/Vertice.hpp"
-
+#include <iomanip>
 /**
  * Standard builder
  */
@@ -32,11 +32,11 @@ int Vertice::getValue() { return this->value; }
 /**
  * add a new adjacency  to the list
  */
-void Vertice::addAdjacebcy(int value) { addAdjacebcy(value, 0); }
+void Vertice::addAdjacency(int value) { addAdjacency(value, 0); }
 /**
  * add a new adjacency and its weight to the list
  */
-void Vertice::addAdjacebcy(int value, int weight) {
+void Vertice::addAdjacency(int value, int weight) {
   adjacency.push_back(Adjacency(value, weight));
 }
 /**
@@ -50,10 +50,25 @@ Adjacency Vertice::removeAdjacency() {
 /** [printAdjacebcy]
  * Only shows the values of adjacent vertices
  */
-void Vertice::printAdjacebcy() {
+void Vertice::printAdjacency() {
 
-  for (auto i = adjacency.begin(); i != adjacency.end(); ++i) {
-    cout << i->getValue() << " > ";
+  if (adjacency.size() > 0) {
+    for (auto i = adjacency.begin(); i != adjacency.end(); ++i) {
+      cout << "> " << i->getValue()<< setw(3);
+    }
+  } else {
+    cout << "null";
   }
-  cout << "null";
+}
+
+void Vertice::printAdjacencyWithWeight() {
+
+  if (adjacency.size() > 0) {
+    for (auto i = adjacency.begin(); i != adjacency.end(); ++i) {
+      cout << " == "
+           << "P:(" << setw(3) << i->getWeight() << ") ==>" << i->getValue();
+    }
+  } else {
+    cout << "null";
+  }
 }

@@ -36,9 +36,8 @@ public:
    * adjacency and the weight that will have this relation
    */
   // Note: that this method may cease to be boolean
-  virtual bool addAdjacebcy(int value, int adjValue, int weight);
+  virtual bool addAdjacency(int value, int adjValue, int weight);
 
-  virtual bool addAdjacebcys(int value, int adjValues[], int weight);
 
   /** Shows all the graphs its vertices (V) and the
    * respective relations (R) of each vertices

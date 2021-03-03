@@ -32,11 +32,11 @@ public:
   /**
    * add a new adjacency  to the list
    */
-  void addAdjacebcy(int value);
+  void addAdjacency(int value);
   /**
    * add a new adjacency and its weight to the list
    */
-  void addAdjacebcy(int value, int weight);
+  void addAdjacency(int value, int weight);
   /**
    */
   Adjacency removeAdjacency();
@@ -44,6 +44,8 @@ public:
   /** [printAdjacebcy]
    * Only shows the values of adjacent vertices
    */
-  void printAdjacebcy();
+  void printAdjacency();
+
+  void printAdjacencyWithWeight();
 };
-#endif Vertice_hpp
+#endif

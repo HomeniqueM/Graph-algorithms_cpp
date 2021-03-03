@@ -1,16 +1,12 @@
-#include "headers/UTG.hpp"
-// Unweighted targeted graph
+#include "headers/UDG.hpp"
 
-void UTG::newVertice(int value) {
-  //
+//  Unweighted directed graph
+
+bool UDG::newRelation(int value, int adjValue) {
+  bool result = true;
   newVertice(value);
-}
+  newVertice(adjValue);
+  addAdjacency(value, adjValue, 0);
 
-void UTG::newAdjacency(int value, int adjValue) {
-  addAdjacebcy(value, adjValue, 0);
-}
-
-void UTG::printGraph() {
-  //
-  printGraph();
+  return result;
 }
