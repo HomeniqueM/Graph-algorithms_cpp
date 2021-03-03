@@ -1,6 +1,7 @@
 
 #include "models/headers/UDG.hpp"
 #include "models/headers/WDG.hpp"
+#include "models/headers/UUG.hpp"
 #include <iostream>
 
 using namespace std;
@@ -33,6 +34,16 @@ int main() {
   wdg->newRelation(22, 14, 11);
   wdg->newRelation(10, 22, 3);
   wdg->print();
+
+
+  UUG *uug = new UUG();
+  cout << endl;
+  cout << "Unweighted untargeted graph" << endl;
+  cout << endl;
+
+  uug->newRelation(10, 2);
+  uug->newRelation(2,8);
+  uug->printGraph();
 
   return 0;
 }
