@@ -3,6 +3,6 @@ Activity developed for the graph discipline
 
 
 - [x] Unweighted directed graph
-- [ ] Unweighted untargeted graph
-- [ ] Weighted untargeted graph
+- [x] Unweighted untargeted graph
+- [x] Weighted untargeted graph
 - [x] Weighted directed graph
